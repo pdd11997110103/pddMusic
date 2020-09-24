@@ -1,0 +1,20 @@
+<!--pages/home.wxml 首页-->
+<view id="swiper_box">
+	<swiper indicator-dots="true" autoplay="2000">
+		<swiper-item>
+			<image src="/images/hanguo.png"></image>
+		</swiper-item>
+		<swiper-item>
+			<image src="/images/huayu.png"></image>
+		</swiper-item>
+		<swiper-item>
+			<image src="/images/oumei.png"></image>
+		</swiper-item>
+		<swiper-item>
+			<image src="/images/riben.png"></image>
+		</swiper-item>
+		<swiper-item>
+			<image src="/images/tuijian.png"></image>
+		</swiper-item>
+	</swiper>
+</view>

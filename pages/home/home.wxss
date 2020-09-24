@@ -1,0 +1,5 @@
+/* pages/home.wxss 首页*/
+#swiper_box image{
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,37 @@
+{
+  "entryPagePath": "pages/home/home",
+  "pages":[
+    "pages/home/home",
+    "pages/discover/discover",
+    "pages/mine/mine"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#33CC99",
+    "navigationBarTitleText": "微信云音乐",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "position":"bottom",
+    "borderStyle":"black",
+    "backgroundColor":"#FEFEFE",
+    "color":"#000000",
+    "selectedColor":"#1296db",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/icon/home1.png",
+        "selectedIconPath": "/icon/home2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/icon/my1.png",
+        "selectedIconPath": "/icon/my2.png"
+      }
+    ]
+  }
+}
