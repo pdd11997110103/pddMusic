@@ -1,20 +1,46 @@
 <!--pages/home.wxml 首页-->
-<view id="swiper_box">
-	<swiper indicator-dots="true" autoplay="2000">
-		<swiper-item>
-			<image src="/images/hanguo.png"></image>
+<view>
+	<view id="list_box">
+		<scroll-view scroll-x="{{true}}" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+			<view>
+				<block wx:for="{{homeTopList}}" wx:for-index="i" wx:for-item="topList" wx:key="i">
+					<view id="topList_{{onTopList == i ? 'on' : 'off'}}" class="topList" bindtap="pageFn" data-index="{{i}}">{{topList.title}}</view>
+				</block>
+				<view id="top_search">
+					<image src="../../icon/sousuo.png" bindtap="searchFn"></image>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+	<swiper id="page_swiper" current="{{onTopList}}" duration="200" bindchange="swiperChange">
+		<swiper-item id="page_1">
+			<view id="page_1_main">
+				<view id="page_1_box">
+					<swiper indicator-dots="true" autoplay="2000" id="swiper_box" circular="true">
+						<swiper-item>
+							<image src="/images/huayu.png"></image>
+						</swiper-item>
+						<swiper-item>
+							<image src="/images/oumei.png"></image>
+						</swiper-item>
+						<swiper-item>
+							<image src="/images/tuijian.png"></image>
+						</swiper-item>
+					</swiper>
+				</view>
+			</view>
+
+			<view id="menu_box">
+				<view class="menu_list" wx:for="{{menuList}}" wx:for-index="i" wx:for-item="menuList" wx:key="i">
+					<view>
+						<image src="{{menuList.url}}" data-index="{{i}}" bindtap="menuFn"></image>
+						<text>{{menuList.title}}</text>
+					</view>
+				</view>
+			</view>
 		</swiper-item>
-		<swiper-item>
-			<image src="/images/huayu.png"></image>
-		</swiper-item>
-		<swiper-item>
-			<image src="/images/oumei.png"></image>
-		</swiper-item>
-		<swiper-item>
-			<image src="/images/riben.png"></image>
-		</swiper-item>
-		<swiper-item>
-			<image src="/images/tuijian.png"></image>
+		<swiper-item id="page_2">
+			<text>MV</text>
 		</swiper-item>
 	</swiper>
 </view>

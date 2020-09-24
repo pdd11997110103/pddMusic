@@ -1,5 +1,84 @@
-/* pages/home.wxss 首页*/
+/* swiper高度问题解决 */
+#page_swiper {
+  width: 100%;
+  height: calc(100vh - 100rpx);
+  padding: 0;
+}
+#page_swiper .swiper-item {
+  overflow: auto;
+}
+#page_swiper .swiper-item::-webkit-scrollbar {
+  display: none;
+}
+/*  */
 #swiper_box image{
   width: 100%;
   height: 100%;
+}
+#swiper_box swiper-item{
+  border-radius: 12rpx;
+}
+#list_box{
+  margin: 10rpx 0;
+}
+#topList_on{
+  font-size: larger;
+  font-weight: 600;
+  color: #000000;
+}
+#top_search{
+  float: right;
+  margin-right: 50rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+#top_search image{
+  width: 100%;
+  height: 100%;
+}
+.topList{
+  display: inline-block;
+  margin: 0rpx 15rpx;
+  font-size: 14px;
+  color: #aaaaaa;
+}
+#page_1_main{
+  display: flex;
+  justify-content: center;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+#page_1_box{
+  width: 90%;
+  height: 100%;
+}
+#menu_box{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+}
+.menu_list{
+  flex: 1;
+  padding: 20rpx;
+  background-color: #ffffff;
+}
+.menu_list view{
+  background-color: #33CC99;
+  width: 100%;
+  height: 70%;
+  border-radius: 50%;
+}
+.menu_list image{
+  width: 60%;
+  height: 60%;
+  margin-top: 20%;
+  margin-left: 20%;
+}
+.menu_list text{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 12px;
 }
