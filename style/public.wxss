@@ -1,0 +1,68 @@
+/*****************************公共css部分 ************************************/
+
+/*全局设置所有页面属性*/
+page {
+  color: #000;
+}
+image {
+  width: 100%;
+  height: 100%;
+}
+/*text可复制类颜色*/
+text {
+  color: #000;
+}
+/* 需要转码文本（行数间需要空格则后台转码div便签间加<br />）*/
+rich-text {
+  color: #000;
+}
+input {
+  color: #000;
+}
+textarea {
+  color: #000;
+  width: 100%;
+}
+/*表单placeholder默认样式*/
+.input-placeholder {
+  color: #DEDFE5;
+}
+/* 清空button样式 */
+button {
+  margin:0;
+  padding:0;
+  line-height:staic;
+}
+/* 处理button默认边框 */
+button:after{
+  border:none;
+} 
+/*按钮不可点击时的默认样式*/
+button[disabled] {
+  background-color: #D0CBC5!important;
+  color: #ECE9E6!important;
+}
+/* 浮动和清除 */
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearF:after{
+  content:"";        
+  display:block;        
+  height:0;        
+  clear:both;        
+  visibility:hidden;        
+}
+/* 文字对齐 */
+.text_c{
+  text-align: center;
+}
+.text_l{
+  text-align: left;
+}
+.text_r{
+  text-align: right;
+}

@@ -1,5 +1,6 @@
 // pages/home.js
-const app = getApp()
+const app = getApp();
+const wxRequestApi = require('../../requestFn/requestFn');
 
 Page({
   data: {
@@ -10,7 +11,7 @@ Page({
       {title:"MV"}
     ],
     menuList:[
-      {title:"推荐",url:"../../icon/tuijian.png"},
+      {title:"发现",url:"../../icon/tuijian.png"},
       {title:"歌单",url:"../../icon/gedan.png"},
       {title:"排行",url:"../../icon/paihang.png"},
       {title:"电台",url:"../../icon/diantai.png"},
@@ -40,12 +41,9 @@ Page({
   },
   // 搜索
   searchFn: function(e) {
-    wx.showToast({
-      title: '敬请期待',
-      duration: 1500,
-      mask:true,
-      icon: 'none'
-    })
+    wx.navigateTo({
+      url: "../search/search"
+    });
   },
   onLoad: function(options) {
     // Do some initialize when page load.

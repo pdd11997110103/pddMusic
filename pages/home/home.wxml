@@ -6,7 +6,7 @@
 				<block wx:for="{{homeTopList}}" wx:for-index="i" wx:for-item="topList" wx:key="i">
 					<view id="topList_{{onTopList == i ? 'on' : 'off'}}" class="topList" bindtap="pageFn" data-index="{{i}}">{{topList.title}}</view>
 				</block>
-				<view id="top_search">
+				<view id="top_search" class="fr">
 					<image src="../../icon/sousuo.png" bindtap="searchFn"></image>
 				</view>
 			</view>
@@ -39,6 +39,7 @@
 				</view>
 			</view>
 		</swiper-item>
+
 		<swiper-item id="page_2">
 			<text>MV</text>
 		</swiper-item>

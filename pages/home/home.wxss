@@ -25,9 +25,9 @@
   font-size: larger;
   font-weight: 600;
   color: #000000;
+  box-shadow: 0 -1px #33CC99 inset;
 }
 #top_search{
-  float: right;
   margin-right: 50rpx;
   height: 60rpx;
   width: 60rpx;

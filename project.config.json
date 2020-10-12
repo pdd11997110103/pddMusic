@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"enhance": false,
 		"postcss": true,
@@ -27,12 +27,12 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.13.0",
-	"appid": "wx554592b9b6af1790",
+	"appid": "wx8a69e474ba11516b",
 	"projectname": "WxMusic",
 	"debugOptions": {
 		"hidedInDevtools": []

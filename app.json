@@ -1,24 +1,25 @@
 {
   "entryPagePath": "pages/home/home",
-  "pages":[
+  "pages": [
     "pages/home/home",
     "pages/discover/discover",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/search/search"
   ],
-  "window":{
-    "backgroundTextStyle":"dark",
+  "window": {
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#33CC99",
-    "navigationBarTitleText": "微信云音乐",
-    "navigationBarTextStyle":"white"
+    "navigationBarTitleText": "听歌demo",
+    "navigationBarTextStyle": "white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "position":"bottom",
-    "borderStyle":"black",
-    "backgroundColor":"#FEFEFE",
-    "color":"#8a8a8a",
-    "selectedColor":"#1296db",
+    "position": "bottom",
+    "borderStyle": "black",
+    "backgroundColor": "#FEFEFE",
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
     "list": [
       {
         "pagePath": "pages/home/home",
