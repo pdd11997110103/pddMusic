@@ -17,6 +17,7 @@ Page({
     let options = {
       url:`search?keywords=${value}`,
     }
+    console.log(options)
     wxRequestApi.wxRequest(options).then(res=>{
       if(res.data.code === 200){
         getApp().globalData.searchValue = res.data.result.songs;
