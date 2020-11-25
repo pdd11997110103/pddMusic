@@ -2,7 +2,6 @@
   "entryPagePath": "pages/home/home",
   "pages": [
     "pages/home/home",
-    "pages/search/search",
     "pages/my/my"
   ],
   "window": {

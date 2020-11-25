@@ -6,9 +6,10 @@ const publicFn = {
   * @param {number} time - 提示存在时长
   */
   Toast (msg, icon, time){
+    let Icon = icon ? "success" : "none";
     wx.showToast({
       title: msg,
-      icon: icon || "none",
+      icon: Icon,
       duration: time || 1500
     })
   },

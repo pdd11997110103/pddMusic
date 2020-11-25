@@ -1,9 +1,15 @@
+/*****************************公共css部分 ************************************/
+
 /*全局设置所有页面属性*/
 page {
-  color: #000000;
+  background-color: #FFFFFF;
   font-size: 12px;
   font-weight: 400;
   font-family: PingFangSC-Regular, PingFang SC;
+  color: #000000;
+}
+cover-view{
+  white-space: normal;
 }
 image {
   width: 100%;
@@ -26,7 +32,7 @@ textarea {
 }
 /*表单placeholder默认样式*/
 .input-placeholder {
-  color: #DEDFE5;
+  color: #8E8E93;
 }
 /* 清空button样式 */
 button {
@@ -100,17 +106,20 @@ button[disabled] {
 .ft12{
   font-size: 12px;
 }
+.ft13{
+  font-size: 13px;
+}
 .ft14{
   font-size: 14px;
+}
+.ft15{
+  font-size: 15px;
 }
 .ft16{
   font-size: 16px;
 }
 .ft18{
   font-size: 18px;
-}
-.ft20{
-  font-size: 20px;
 }
 /* 字体粗细 */
 .fw600{
@@ -119,6 +128,9 @@ button[disabled] {
 /* 行高 */
 .lh16{
   line-height: 16px;
+}
+.lh17{
+  line-height: 17px;
 }
 .lh18{
   line-height: 18px;
@@ -142,7 +154,6 @@ button[disabled] {
   text-overflow:ellipsis;
   white-space: nowrap;
 }
-/* 多行文本省略号 */
 .omit2{
   display: -webkit-box ;
   overflow: hidden;
@@ -198,10 +209,31 @@ button[disabled] {
 .oh{
   overflow: hidden;
 }
-/* 弹性盒子 */
+/* 弹性盒子 超出换行*/
 .flex{
   display: flex;
 }
+/* 两端对齐，项目之间的间隔都相等 */
+.flex_s_b{
+  justify-content: space-between;
+}
+/* 多列等高   如果子元素未设置高度或设为auto，将自动占满整个容器的高度 */
+.flex_a_s{
+  align-items: stretch;
+}
+/* Y 轴的中间对齐 */
+.flex_a_c{
+  align-items: center;
+}
+/* X 轴的中间对齐 */
+.flex_j_c{
+  justify-content: center;
+}
+/* 主轴为垂直Y方向，起点在上沿 */
+.flex_d_y{
+  flex-direction: column;
+}
+/* 垂直水平中间对齐 */
 .flex_c{
   display: flex;
   justify-content: center;

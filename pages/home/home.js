@@ -1,5 +1,5 @@
-import { HTTP } from "../../requestFn/Api"
-import { FN } from "../../publicFn/public"
+import  HTTP  from "../../requestFn/Api"
+import  FN  from "../../publicFn/public"
 
 Page({
   data: {
