@@ -1,4 +1,3 @@
-<!--pages/search/search.wxml 搜索-->
 <view id="searchBox">
   <image src="/icon/sousuo.png" id="searchIcon"></image>
   <input class="weui-input" auto-focus placeholder="搜索 音乐/视频/歌手/歌单" id="searchIpt" bindconfirm="searchGo" confirm-type="search"/>

@@ -1,4 +1,3 @@
-/* pages/search/search.wxss */
 #searchBox{
   position: relative;
 }

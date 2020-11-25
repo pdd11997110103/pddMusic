@@ -1,18 +1,13 @@
-import { HTTP } from "../../requestFn/Api"
-
+// pages/my/my.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    value:null,
-    searchList:[]
+
   },
-  // 搜索的方法
-  search (e) {
-   
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

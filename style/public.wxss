@@ -1,8 +1,9 @@
-/*****************************公共css部分 ************************************/
-
 /*全局设置所有页面属性*/
 page {
-  color: #000;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: PingFangSC-Regular, PingFang SC;
 }
 image {
   width: 100%;
@@ -10,17 +11,17 @@ image {
 }
 /*text可复制类颜色*/
 text {
-  color: #000;
+  color: #000000;
 }
 /* 需要转码文本（行数间需要空格则后台转码div便签间加<br />）*/
 rich-text {
-  color: #000;
+  color: #000000;
 }
 input {
-  color: #000;
+  color: #000000;
 }
 textarea {
-  color: #000;
+  color: #000000;
   width: 100%;
 }
 /*表单placeholder默认样式*/
@@ -49,7 +50,7 @@ button[disabled] {
 .fr{
   float: right;
 }
-.clearF:after{
+.clear_f:after{
   content:"";        
   display:block;        
   height:0;        
@@ -65,4 +66,157 @@ button[disabled] {
 }
 .text_r{
   text-align: right;
+}
+/* 文字删除线 */
+.del_line{
+  text-decoration:line-through;
+}
+/* 文字颜色 */
+.black_low{
+  color: #4A4A4A;
+}
+.gray{
+  color: #666666;
+}
+.gray_low{
+  color: #8E8E93;
+}
+.red{
+  color: #FA5757;
+}
+.blue{
+  color: #41A1FF;
+}
+.blue_low{
+  color: #76ACFF;
+}
+.white{
+  color: #FFFFFF;
+}
+/* 字体大小 */
+.ft10{
+  font-size: 10px;
+}
+.ft12{
+  font-size: 12px;
+}
+.ft14{
+  font-size: 14px;
+}
+.ft16{
+  font-size: 16px;
+}
+.ft18{
+  font-size: 18px;
+}
+.ft20{
+  font-size: 20px;
+}
+/* 字体粗细 */
+.fw600{
+  font-weight: 600;
+}
+/* 行高 */
+.lh16{
+  line-height: 16px;
+}
+.lh18{
+  line-height: 18px;
+}
+.lh20{
+  line-height: 20px;
+}
+.lh22{
+  line-height: 22px;
+}
+.lh24{
+  line-height: 24px;
+}
+/* 自动换行 */
+.wb{
+  word-break:break-all
+}
+/* 单行文本省略号 */
+.omit{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+/* 多行文本省略号 */
+.omit2{
+  display: -webkit-box ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+/* 圆角 */
+.br2{
+  border-radius: 2px;
+}
+.br4{
+  border-radius: 4px;
+}
+.br8{
+  border-radius: 8px;
+}
+.br50{
+  border-radius: 50%;
+}
+/* 定位 */
+.pa{
+  position: absolute;
+}
+.pr{
+  position: relative;
+}
+.pf{
+  position: fixed;
+}
+/* z-index层级 */
+.z9{
+  z-index: 9;
+}
+.z99{
+  z-index: 99;
+}
+.z999{
+  z-index: 999;
+}
+.z1000{
+  z-index: 1000;
+}
+/* 外边距 */
+.mr10{
+  margin-right: 10px;
+}
+.ml10{
+  margin-left: 10px;
+}
+/* 内容溢出元素框 */
+.oh{
+  overflow: hidden;
+}
+/* 弹性盒子 */
+.flex{
+  display: flex;
+}
+.flex_c{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 两边留白布局 */
+.open_class_box{
+  width: 93.6%;
+  margin:0px 3.2%;
+}
+/* 点击效果类 */
+.click_change{
+  opacity: 0.6;
+}
+/* 元素隐藏 */
+.hide{
+  display: none;
 }

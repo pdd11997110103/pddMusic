@@ -1,14 +1,18 @@
-// pages/home.js
-const app = getApp();
-const wxRequestApi = require('../../requestFn/requestFn');
+import { HTTP } from "../../requestFn/Api"
+import { FN } from "../../publicFn/public"
 
 Page({
   data: {
-    onTopList:0,
-    navScrollLeft:0,
+    anchor: {
+      deviceHeight: 0,
+      anchorTop: 0,
+      anchorBottom: 0,
+      anchorScreenBottom: 0
+    },
+    pageIndex:0,//swiper页码
     homeTopList:[
-      {title:"推荐"},
-      {title:"MV"}
+      {title:"推荐",id:0},
+      {title:"MV",id:1}
     ],
     menuList:[
       {title:"发现",url:"../../icon/tuijian.png"},
@@ -19,19 +23,20 @@ Page({
     ]
   },
   // 点击标题翻页
-  pageFn: function(e) {
+  cilckPage (e) {
     this.setData({
-      onTopList: e.currentTarget.dataset.index,
+      pageIndex: e.currentTarget.dataset.index,
     })
   },
-  // 翻页
-  swiperChange: function (e) {
+  // swiper翻页
+  swiperPage (e) {
+    // this.computeSwiperHeight(e.detail.current);
     this.setData({
-      onTopList: e.detail.current,
+      pageIndex: e.detail.current,
     })
   },
-  // 菜单
-  menuFn: function(e) {
+  // 点击菜单
+  clickMenu (e) {
     wx.showToast({
       title: '敬请期待',
       duration: 1500,
@@ -39,56 +44,103 @@ Page({
       icon: 'none'
     })
   },
-  // 搜索
-  searchFn: function(e) {
+  // 去搜索
+  toSearch (e) {
     wx.navigateTo({
       url: "../search/search"
     });
   },
-  onLoad: function(options) {
-    // Do some initialize when page load.
+  // Swiper高度计算
+  computeSwiperHeight (Index) {
+    let getSwiperHeight = () => {
+      let min = this.data.anchor.anchorScreenBottom - this.data.anchor.anchorTop;
+      let value = this.data.anchor.anchorBottom - this.data.anchor.anchorTop
+      return Math.max(min, value)
+    };
+    wx.createSelectorQuery()
+    .select('.anchor_screen_bottom')
+    .boundingClientRect()
+    .selectViewport()
+    .scrollOffset()
+    .exec(res => {
+      this.data.anchor.anchorScreenBottom = res[0].bottom
+    });
+    wx.createSelectorQuery()
+    .selectAll('.anchor_top')
+    .boundingClientRect()
+    .selectViewport()
+    .scrollOffset()
+    .exec(res => {
+      this.data.anchor.anchorTop = res[0][Index].top
+      this.setData({
+        'anchor.deviceHeight': getSwiperHeight()
+      })
+    });
+    wx.createSelectorQuery()
+    .selectAll('.anchor_bottom')
+    .boundingClientRect()
+    .selectViewport()
+    .scrollOffset()
+    .exec(res => {
+      this.data.anchor.anchorBottom = res[0][Index].bottom
+      this.setData({
+        'anchor.deviceHeight': getSwiperHeight()
+      })
+    });
   },
-  onShow: function() {
-    // Do something when page show.
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
   },
-  onReady: function() {
-    // Do something when page ready.
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    // this.computeSwiperHeight(0);
   },
-  onHide: function() {
-    // Do something when page hide.
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
   },
-  onUnload: function() {
-    // Do something when page close.
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
   },
-  onPullDownRefresh: function() {
-    // Do something when pull down.
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
   },
-  onReachBottom: function() {
-    // Do something when page reach bottom.
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
   },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
   onShareAppMessage: function () {
-    // return custom share data when user share.
-  },
-  onPageScroll: function() {
-    // Do something when page scroll
-  },
-  onResize: function() {
-    // Do something when page resize
-  },
-  onTabItemTap(item) {
-    console.log(item.index)
-    console.log(item.pagePath)
-    console.log(item.text)
-  },
-  // Event handler.
-  viewTap: function() {
-    this.setData({
-      text: 'Set some data for updating view.'
-    }, function() {
-      // this is setData callback
-    })
-  },
-  customData: {
-    hi: 'MINA'
+
   }
 })

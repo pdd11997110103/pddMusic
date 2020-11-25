@@ -2,9 +2,8 @@
   "entryPagePath": "pages/home/home",
   "pages": [
     "pages/home/home",
-    "pages/discover/discover",
-    "pages/mine/mine",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/my/my"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -28,7 +27,7 @@
         "selectedIconPath": "/icon/home2.png"
       },
       {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "/icon/my1.png",
         "selectedIconPath": "/icon/my2.png"

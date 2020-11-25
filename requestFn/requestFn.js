@@ -1,8 +1,8 @@
 // 请求封装
 const app = getApp()
-const pathUrl = app.globalData.url
+const baseURL = app.globalData.baseURL
 
-function wxRequest(options) {
+function Request(options) {
   return new Promise((resolve, reject) => {
     if(!options.loading){
       wx.showLoading({
@@ -10,7 +10,7 @@ function wxRequest(options) {
       })
     }
     wx.request({
-      url: pathUrl + options.url || '',
+      url: baseURL + options.url || '',
       data: options.data || {},
       method: options.method || 'post',
       header:options.header || {},
@@ -19,7 +19,7 @@ function wxRequest(options) {
         if(!options.loading){
           wx.hideLoading()
         }
-        if (res.data.code=='1') {
+        if (res.data.code == '1') {
           resolve(res);
         }else {//返回错误提示信息
           // wx.showToast({
@@ -37,5 +37,5 @@ function wxRequest(options) {
 }
 
 module.exports = {
-  wxRequest
+  Request
 }

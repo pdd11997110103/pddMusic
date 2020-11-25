@@ -1,4 +1,3 @@
-//app.js
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -35,7 +34,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    url:'http://localhost:3000/',
+    baseURL:'http://localhost:3000/',
     searchValue:[]
   }
 })
