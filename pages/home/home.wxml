@@ -1,0 +1,23 @@
+<!-- 标题 -->
+<view id="title" class="box pr">
+  <view class="top_title text_c fl pr mr10" wx:for="{{titleList}}" wx:for-item="title" wx:key="index">
+    <text id="{{pageIndex === index ? 'this':''}}" class="ft18 gray">{{title.title}}</text>
+    <view class="line pa" wx:if="{{pageIndex === index}}"></view>
+  </view>
+</view>
+<!-- 分页内容 -->
+<view id="content" class="box">
+  <swiper id="swiper" current="{{pageIndex}}" style="height: {{anchor.deviceHeight + 'px'}}" bindchange="swiperChange">
+
+    <swiper-item wx:for="{{musicList}}" wx:for-item="list" wx:key="index">
+      <!-- 锚点A -->
+      <view class="anchor_top"></view>
+      {{list.id}}
+      <!-- 锚点B -->
+      <view class="anchor_bottom"></view>
+    </swiper-item>
+
+  </swiper>
+  <!-- 锚点C -->
+  <view class="anchor_screen_bottom pa"></view>
+</view>

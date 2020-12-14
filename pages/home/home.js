@@ -10,39 +10,14 @@ Page({
       anchorScreenBottom: 0
     },
     pageIndex:0,//swiper页码
-    homeTopList:[
-      {title:"推荐",id:0},
+    titleList:[
+      {title:"听歌",id:0},
       {title:"MV",id:1}
     ],
-    menuList:[
-      {title:"发现",url:"../../icon/tuijian.png"},
-      {title:"歌单",url:"../../icon/gedan.png"},
-      {title:"排行",url:"../../icon/paihang.png"},
-      {title:"电台",url:"../../icon/diantai.png"},
-      {title:"直播",url:"../../icon/zhibo.png"}
+    musicList:[
+      {id:1},
+      {id:2}
     ]
-  },
-  // 点击标题翻页
-  cilckPage (e) {
-    this.setData({
-      pageIndex: e.currentTarget.dataset.index,
-    })
-  },
-  // swiper翻页
-  swiperPage (e) {
-    // this.computeSwiperHeight(e.detail.current);
-    this.setData({
-      pageIndex: e.detail.current,
-    })
-  },
-  // 点击菜单
-  clickMenu (e) {
-    wx.showToast({
-      title: '敬请期待',
-      duration: 1500,
-      mask:true,
-      icon: 'none'
-    })
   },
   // 去搜索
   toSearch (e) {
@@ -50,8 +25,16 @@ Page({
       url: "../search/search"
     });
   },
+  // swiper翻页事件
+  swiperChange (e) {
+    this.computeSwiperHeight(e.detail.current);
+    this.setData({
+      pageIndex: e.detail.current,
+    });
+  },
   // Swiper高度计算
-  computeSwiperHeight (Index) {
+  computeSwiperHeight (pageIndex) {
+    console.log(pageIndex)
     let getSwiperHeight = () => {
       let min = this.data.anchor.anchorScreenBottom - this.data.anchor.anchorTop;
       let value = this.data.anchor.anchorBottom - this.data.anchor.anchorTop
@@ -71,7 +54,7 @@ Page({
     .selectViewport()
     .scrollOffset()
     .exec(res => {
-      this.data.anchor.anchorTop = res[0][Index].top
+      this.data.anchor.anchorTop = res[0][pageIndex].top
       this.setData({
         'anchor.deviceHeight': getSwiperHeight()
       })
@@ -82,10 +65,11 @@ Page({
     .selectViewport()
     .scrollOffset()
     .exec(res => {
-      this.data.anchor.anchorBottom = res[0][Index].bottom
+      this.data.anchor.anchorBottom = res[0][pageIndex].bottom
       this.setData({
         'anchor.deviceHeight': getSwiperHeight()
       })
+      console.log(getSwiperHeight())
     });
   },
   /**
@@ -99,7 +83,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    // this.computeSwiperHeight(0);
+    this.computeSwiperHeight(0);
   },
 
   /**

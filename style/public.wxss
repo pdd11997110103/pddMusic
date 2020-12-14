@@ -15,6 +15,12 @@ image {
   width: 100%;
   height: 100%;
 }
+/* 通用盒子 */
+.box{
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
 /*text可复制类颜色*/
 text {
   color: #000000;
@@ -100,26 +106,20 @@ button[disabled] {
   color: #FFFFFF;
 }
 /* 字体大小 */
-.ft10{
-  font-size: 10px;
-}
 .ft12{
   font-size: 12px;
 }
-.ft13{
-  font-size: 13px;
-}
 .ft14{
   font-size: 14px;
-}
-.ft15{
-  font-size: 15px;
 }
 .ft16{
   font-size: 16px;
 }
 .ft18{
   font-size: 18px;
+}
+.ft20{
+  font-size: 20px;
 }
 /* 字体粗细 */
 .fw600{

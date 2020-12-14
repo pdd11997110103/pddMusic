@@ -1,41 +1,33 @@
-// 请求封装
-const app = getApp()
-const baseURL = app.globalData.baseURL
+const app = getApp();
+const baseURL = app.globalData.baseURL;
+const FN = require('../publicFn/public');
 
-function Request(options) {
+const Request = (options) =>{
   return new Promise((resolve, reject) => {
-    if(!options.loading){
-      wx.showLoading({
-        title: '加载中...',
-      })
-    }
+    if(!options.loading) FN.Loading(1);
     wx.request({
       url: baseURL + options.url || '',
       data: options.data || {},
-      method: options.method || 'post',
-      header:options.header || {},
-      // success: resolve,
-      success: function (res) {    
-        if(!options.loading){
-          wx.hideLoading()
-        }
-        if (res.data.code == '1') {
-          resolve(res);
-        }else {//返回错误提示信息
-          // wx.showToast({
-          //   title: res.data.msg,
-          //   icon:'none'
-          // })
-          resolve(res);
+      method: options.method || 'POST',
+      responseType:options.responseType || "",
+      timeout:15000,
+      success (res) {
+        if(!options.loading) FN.LoadingOff();
+        console.log(res)
+        if(res.statusCode === 200){
+          resolve(res.data);
+        }else{
+          FN.Toast(res.errMsg);
         }
       },
-      fail: reject,
-      complete() {
+      fail (res) {
+        FN.Toast("网络开小差了");
+        reject(res)
       }
     })
   })
-}
+};
 
 module.exports = {
   Request
-}
+};

@@ -10,26 +10,24 @@
     "navigationBarTitleText": "听歌demo",
     "navigationBarTextStyle": "white"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "position": "bottom",
     "borderStyle": "black",
-    "backgroundColor": "#FEFEFE",
-    "color": "#8a8a8a",
+    "backgroundColor": "#FFFFFF",
+    "color": "#bfbfbf",
     "selectedColor": "#1296db",
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "/icon/home1.png",
-        "selectedIconPath": "/icon/home2.png"
+        "text": "听音乐",
+        "iconPath": "/icon/music1.png",
+        "selectedIconPath": "/icon/music2.png"
       },
       {
         "pagePath": "pages/my/my",
-        "text": "我的",
-        "iconPath": "/icon/my1.png",
-        "selectedIconPath": "/icon/my2.png"
+        "text": "字幕君",
+        "iconPath": "/icon/title1.png",
+        "selectedIconPath": "/icon/title2.png"
       }
     ]
   }

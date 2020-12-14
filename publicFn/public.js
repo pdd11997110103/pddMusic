@@ -1,4 +1,29 @@
+const app = getApp();
+
 const publicFn = {
+  /**
+  * Loading转圈圈
+  * @param {nunber} mask - 不传默认不显示透明蒙层
+  * @param {string} msg - 提示语 默认值：加载中
+  */
+  Loading (mask, msg){
+    let Mask = mask ? true : false;
+    let Msg = msg ? msg : "加载中"
+    wx.showLoading({
+      title: Msg,
+      mask: Mask
+    })
+  },
+  /**
+  * Loading转圈圈
+  * @param {nunber} time - 时间 不传默认为0
+  */
+  LoadingOff (time){
+    let Time = time ? time : 0;
+    setTimeout(() => {
+      wx.hideLoading();
+    }, Time);
+  },
   /**
   * Toast提示
   * @param {string} msg - 提示内容
@@ -6,11 +31,11 @@ const publicFn = {
   * @param {number} time - 提示存在时长
   */
   Toast (msg, icon, time){
-    let Icon = icon ? "success" : "none";
+    let Icon = icon === 1 ? "success" : "none";
     wx.showToast({
       title: msg,
       icon: Icon,
-      duration: time || 1500
+      duration: time || 2000
     })
   },
   /**
@@ -41,7 +66,7 @@ const publicFn = {
       wx.showModal({
         title: '温馨提示',
         content: msg,
-        cancelColor:"007AFF",
+        cancelColor:"#000000",
         confirmColor:"#007AFF",
         success (res) {
           if (res.confirm) {
@@ -53,6 +78,22 @@ const publicFn = {
       })
     })
   },
+  /**
+  * 微信登陆 wx.login
+  */
+  wxLogin () {
+    return new Promise((resolve, reject) => {
+      wx.login({
+        success (res) {
+          if (res.code) {
+            resolve(res.code)
+          } else {
+            reject(res.errMsg);
+          }
+        }
+      })
+    });
+  }
 }
 
 module.exports = publicFn;

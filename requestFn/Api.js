@@ -2,7 +2,6 @@ const requestFn = require('../requestFn/requestFn');
 
 const API = {
   getCode:"/getRandomPicture.app",
-  login:"/web/live/login/login.am",
 };
 
 const HTTP = {
@@ -20,4 +19,4 @@ const HTTP = {
     })
   },
 }
-module.exports = { HTTP }
+module.exports = HTTP;
