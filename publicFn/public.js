@@ -1,5 +1,3 @@
-const app = getApp();
-
 const publicFn = {
   /**
   * Loading转圈圈
@@ -15,14 +13,10 @@ const publicFn = {
     })
   },
   /**
-  * Loading转圈圈
-  * @param {nunber} time - 时间 不传默认为0
+  * 取消Loading转圈圈
   */
-  LoadingOff (time){
-    let Time = time ? time : 0;
-    setTimeout(() => {
-      wx.hideLoading();
-    }, Time);
+  LoadingOff (){
+    wx.hideLoading();
   },
   /**
   * Toast提示
@@ -51,6 +45,8 @@ const publicFn = {
         confirmColor:"#007AFF",
         success (res) {
           if (res.confirm) {
+            resolve(res);
+          }else if(res.cancel){
             resolve(res);
           }
         }

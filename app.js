@@ -3,8 +3,8 @@ App({
   onShow: function () {},
   onHide: function () {},
   globalData: {
-    userMsg: null,
-    baseURL:'http://localhost:3000/',
-    searchVal:[]
+    userInfo: null,
+    unitType:null,
+    baseURL:'http://localhost:3000'
   }
-})
+});

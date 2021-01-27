@@ -9,15 +9,24 @@
 <view id="content" class="box">
   <swiper id="swiper" current="{{pageIndex}}" style="height: {{anchor.deviceHeight + 'px'}}" bindchange="swiperChange">
 
-    <swiper-item wx:for="{{musicList}}" wx:for-item="list" wx:key="index">
-      <!-- 锚点A -->
-      <view class="anchor_top"></view>
-      {{list.id}}
-      <!-- 锚点B -->
-      <view class="anchor_bottom"></view>
+    <!-- 视频 -->
+    <swiper-item>
+      <view class="anchor_top"><!-- 锚点A --></view>
+
+      <view class="anchor_bottom"><!-- 锚点B --></view>
     </swiper-item>
 
+
+
+    <!-- MV -->
+    <swiper-item>
+      <view class="anchor_top"><!-- 锚点A --></view>
+      <view class="mv_box flex_c">
+        <text class="ft20 gray_low">敬请期待</text>
+      </view>
+      <view class="anchor_bottom"><!-- 锚点B --></view>
+    </swiper-item>
   </swiper>
-  <!-- 锚点C -->
-  <view class="anchor_screen_bottom pa"></view>
+  
+  <view class="anchor_screen_bottom pa"><!-- 锚点C --></view>
 </view>

@@ -1,4 +1,4 @@
-import  HTTP  from "../../requestFn/Api"
+import  HTTP  from "../../requestFn/Api/Api"
 import  FN  from "../../publicFn/public"
 
 Page({
@@ -14,10 +14,6 @@ Page({
       {title:"听歌",id:0},
       {title:"MV",id:1}
     ],
-    musicList:[
-      {id:1},
-      {id:2}
-    ]
   },
   // 去搜索
   toSearch (e) {
@@ -34,7 +30,6 @@ Page({
   },
   // Swiper高度计算
   computeSwiperHeight (pageIndex) {
-    console.log(pageIndex)
     let getSwiperHeight = () => {
       let min = this.data.anchor.anchorScreenBottom - this.data.anchor.anchorTop;
       let value = this.data.anchor.anchorBottom - this.data.anchor.anchorTop
@@ -69,14 +64,33 @@ Page({
       this.setData({
         'anchor.deviceHeight': getSwiperHeight()
       })
-      console.log(getSwiperHeight())
     });
+  },
+  // 获取banner图
+  getBanner () {
+    HTTP.Banner(2)
+    .then(res => {
+      console.log(res)
+    })
+  },
+  // 登陆
+  myLogin () {
+    HTTP.Login(18707194966,"993080086")
+    .then(res => {
+      console.log(res)
+    })
+  },
+  Recommend () {
+    HTTP.Recommend()
+    .then(res => {
+      console.log(res)
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**

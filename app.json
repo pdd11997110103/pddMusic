@@ -1,7 +1,8 @@
 {
-  "entryPagePath": "pages/home/home",
+  "entryPagePath": "pages/song/song",
   "pages": [
-    "pages/home/home",
+    "pages/song/song",
+    "pages/mv/mv",
     "pages/my/my"
   ],
   "window": {
@@ -18,14 +19,20 @@
     "selectedColor": "#1296db",
     "list": [
       {
-        "pagePath": "pages/home/home",
-        "text": "听音乐",
+        "pagePath": "pages/song/song",
+        "text": "音乐",
         "iconPath": "/icon/music1.png",
         "selectedIconPath": "/icon/music2.png"
       },
       {
+        "pagePath": "pages/mv/mv",
+        "text": "视频",
+        "iconPath": "/icon/title1.png",
+        "selectedIconPath": "/icon/title2.png"
+      },
+      {
         "pagePath": "pages/my/my",
-        "text": "字幕君",
+        "text": "我的",
         "iconPath": "/icon/title1.png",
         "selectedIconPath": "/icon/title2.png"
       }

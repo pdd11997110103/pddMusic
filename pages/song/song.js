@@ -1,25 +1,42 @@
-// pages/my/my.js
+import  HTTP  from "../../requestFn/Api/Api"
+import  FN  from "../../publicFn/public"
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    
   },
-
+  // 去搜索
+  toSearch (e) {
+    wx.navigateTo({
+      url: "../search/search"
+    });
+  },
+  // 获取banner图
+  getBanner () {
+    HTTP.Banner(2)
+    .then(res => {
+      console.log(res)
+    })
+  },
+  //推荐
+  Recommend () {
+    HTTP.Recommend()
+    .then(res => {
+      console.log(res)
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getBanner();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
