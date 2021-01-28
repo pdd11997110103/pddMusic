@@ -1,1 +1,6 @@
-/* pages/search/search.wxss */
+page{
+  background-color: #f6f6f6;
+}
+.search_conter{
+  background: #ffffff !important;
+}

@@ -9,7 +9,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#33CC99",
-    "navigationBarTitleText": "听歌demo",
+    "navigationBarTitleText": "demo",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",

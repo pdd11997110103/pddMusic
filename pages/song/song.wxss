@@ -1,12 +1,11 @@
 page{
-  background-color: #f6f6f6;
+  background-color: #f6f6f6;
 }
 .search_box{
-  height: 54px;
-  padding: 10px 12px;
-  box-sizing: border-box;
+  height: 54px;
 }
-.search{
-  height: 34px;
-  background: #ffffff;
+.search_conter{
+  width: calc(100% - 24px);
+  height: 34px;
+  background-color: #ffffff;
 }
