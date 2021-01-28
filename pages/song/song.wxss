@@ -1,49 +1,12 @@
 page{
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
-/* 锚点 */
-.anchor_top {
-  width: 0;
-  height: 0;
+.search_box{
+  height: 54px;
+  padding: 10px 12px;
+  box-sizing: border-box;
 }
-.anchor_bottom {
-  width: 0;
-  height: 0;
-}
-.anchor_screen_bottom {
-  bottom: 0;
-  width: 0;
-  height: 0;
-}
-/* mv */
-.mv_box{
-  height: 100%;
-}
-/* 标题 */
-#title{
-  height: 32px;
-}
-.top_title{
-  width: 42px;
-  line-height: 32px;
-}
-#this{
-  font-weight: 600;
-  color: #000000;
-}
-.line{
-  width: 100%;
-  height: 4px;
-  background-color: #33CC99;
-  top: 22px;
-  z-index: -1;
-}
-.search_btn{
-  height: 30px;
-  background-color: #FFFFFF;
-  border-radius: 15px;
-}
-.search_icon{
-  width: 18px;
-  height: 18px;
+.search{
+  height: 34px;
+  background: #ffffff;
 }

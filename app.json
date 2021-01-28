@@ -3,7 +3,8 @@
   "pages": [
     "pages/song/song",
     "pages/mv/mv",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "dark",

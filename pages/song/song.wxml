@@ -1,0 +1,6 @@
+<view class="search_box">
+  <view class="search br4 flex_c">
+    <van-icon name="search" size="24" />
+    <text>搜索</text>
+  </view>
+</view>
