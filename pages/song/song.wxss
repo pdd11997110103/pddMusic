@@ -36,15 +36,15 @@
 .scroll_song{
   height: 142px;
   padding-bottom: 12px;
+  padding-left: 7px;
   margin-bottom: 10px;
   border-radius: 0 0 10px 10px;
 }
 .song_list_conter{
-  width: 124px;
+  width: 100px;
   height: 142px;
   flex-shrink: 0;
-  padding: 5px 12px;
-  box-sizing: border-box;
+  padding: 5px 6px;
 }
 .song_list_main{
   width: 100px;
