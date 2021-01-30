@@ -1,0 +1,10 @@
+<view class="title_box flex flex_s_b flex_a_c bg_white">
+  <view class="tltle_conter_left flex_c">
+    <slot name="icon_left"></slot>
+    <text class="ft16 fw600">{{ title }}</text>
+  </view>
+  <view class="tltle_conter_right flex_c">
+    <text class="enter_txt">{{ enter }}</text>
+    <slot name="icon_right"></slot>
+  </view>
+</view>

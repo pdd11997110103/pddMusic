@@ -3,7 +3,9 @@ const requestFn = require('../requestFn');
 const API = {
   banner:"/banner",//banner图
   login:"/login/cellphone",//登陆
-  recommend:"/personalized/newsong",//推荐音乐
+  recommendMusic:"/personalized/newsong",//推荐新音乐
+  circleIcon:"/homepage/dragon/ball",//首页圆形图标入口
+  recommendSongList:"/personalized",//推荐歌单
 };
 
 const HTTP = {
@@ -17,6 +19,26 @@ const HTTP = {
       data:{
         type:type,
       },
+    })
+  },
+  /**
+  * 获取首页圆形图标入口列表
+  */
+ circleIcon(){
+    return requestFn.Request({
+      url:API.circleIcon
+    })
+  },
+  /**
+  * 获取首页推荐歌单
+  * @param {number} limit - 取出数量, 默认为 30
+  */
+  recommendSongList(limit){
+    return requestFn.Request({
+      url:API.recommendSongList,
+      data:{
+        limit:limit
+      }
     })
   },
   /**
@@ -34,12 +56,15 @@ const HTTP = {
     })
   },
   /**
-  * 推荐新歌 取出数量 , 默认为 10
+  * 推荐新音乐
+  * @param {number} limit - 取出数量, 默认为 10
   */
-  Recommend(){
+  recommendMusic(limit){
     return requestFn.Request({
-      url:API.recommend,
-      data:{},
+      url:API.recommendMusic,
+      data:{
+        limit:limit
+      },
     })
   },
 }

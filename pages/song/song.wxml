@@ -1,6 +1,62 @@
+<!-- 搜索栏 -->
 <view class="search_box flex_c" bindtap="toSearch">
-  <view class="search_conter flex_c br4">
-    <van-icon name="search" size="24" />
-    <text>搜索</text>
+  <view class="search_conter flex_c br4 bg_white">
+    <van-icon name="search" size="16" />
+    <text class="gray_low opacity7">搜索</text>
   </view>
 </view>
+<!-- banner图 -->
+<swiper class="swiper_banner bg_white" style="height:{{bannerH}}px;" autoplay="true" interval="3000" circular="true" indicator-dots="true">
+  <swiper-item class="br8 pr" wx:for="{{ bannerList }}" wx:key="index">
+    <image src="{{ item.pic }}" bindload="imgHeight"></image>
+    <view class="banner_tag pa white flex_c" style="background-color:{{ item.titleColor }}">{{ item.typeTitle }}</view>
+  </swiper-item>
+</swiper>
+<!-- 圆形图标 -->
+<scroll-view scroll-x="true" enable-flex="true" enhanced="true" show-scrollbar="false" class="scroll_icon flex flex_s_b bg_white">
+  <view class="icon_enter flex_c flex_d_y" wx:for="{{ CircleIconList }}" wx:key="id">
+    <view class="icon_enter_bg oh br50">
+      <image src="{{ item.iconUrl }}"></image>
+    </view>
+    <text class="omit gray text_c lh16">{{ item.name }}</text>
+  </view>
+</scroll-view>
+<!-- 分栏条 -->
+<pdd-title title="推荐歌单" enter="更多">
+  <van-icon slot="icon_right" name="arrow" size="12" />
+</pdd-title>
+<!-- 推荐歌单 -->
+<scroll-view scroll-x="true" enable-flex="true" enhanced="true" show-scrollbar="false" class="scroll_song flex flex_s_b bg_white">
+  <view class="song_list_conter" wx:for="{{ recommendSongList }}" wx:key="id">
+    <view class="song_list_main oh pr br8">
+      <image src="{{ item.picUrl }}"></image>
+      <view class="song_play_num pa flex_c">
+        <van-icon name="play" size="12" class="white mr3" />
+        <text class="white">{{ item.playCount }}</text>
+      </view>
+    </view>
+    <view class="song_list_text omit2">
+      <text class="lh20">{{ item.name }}</text>
+    </view>
+  </view>
+</scroll-view>
+<!-- 分栏条 -->
+<pdd-title title="大家都在听" enter="播放">
+  <van-icon slot="icon_left" name="replay" size="16" class="mr3" />
+  <van-icon slot="icon_right" name="play" size="14" />
+</pdd-title>
+<!-- 推荐音乐 -->
+<swiper class="swiper_music bg_white" circular="true" next-margin="15px">
+  <swiper-item>
+    <view class="music_conter">
+      <view class="music_row">
+        <view class="row_img">
+          <image src="../../images/oumei.png"></image>
+        </view>
+        <view class="row_text">
+          <text>张三的情书 - 蔡健雅</text>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

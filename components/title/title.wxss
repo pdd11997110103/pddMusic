@@ -1,0 +1,17 @@
+
+.title_box{
+  padding: 12px;
+  box-sizing: border-box;
+}
+.tltle_conter_left{
+  height: 30px;
+}
+.tltle_conter_right{
+  width: 60px;
+  height: 26px;
+  border: 1px solid rgba(50,50,50,.1);
+  border-radius: 13px;
+}
+.enter_txt{
+  margin-right: 3px;
+}

@@ -89,7 +89,7 @@ const publicFn = {
         }
       })
     });
-  }
+  },
 }
 
 module.exports = publicFn;

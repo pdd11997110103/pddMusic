@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "pdd-title":"/components/title/title",
     "van-icon": "@vant/weapp/icon/index"
   }
 }

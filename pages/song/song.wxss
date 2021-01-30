@@ -1,11 +1,62 @@
-page{
-  background-color: #f6f6f6;
-}
 .search_box{
   height: 54px;
 }
 .search_conter{
   width: calc(100% - 24px);
   height: 34px;
-  background-color: #ffffff;
+  border-radius: 17px;
+}
+.swiper_banner{
+  padding: 0 12px;
+}
+.banner_tag{
+  bottom: 0;
+  right: 0;
+  width: auto;
+  padding: 4px 8px;
+  border-radius: 8px 0 0 0;
+}
+.scroll_icon{
+  height: 74px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(50,50,50,0.1);
+}
+.icon_enter{
+  height: 74px;
+  width: 68px;
+  flex-shrink: 0;
+}
+.icon_enter_bg{
+  height: 50px;
+  width: 50px;
+  margin-bottom: 8px;
+  background-color: #33CC99;
+}
+.scroll_song{
+  height: 142px;
+  padding-bottom: 12px;
+  margin-bottom: 10px;
+  border-radius: 0 0 10px 10px;
+}
+.song_list_conter{
+  width: 124px;
+  height: 142px;
+  flex-shrink: 0;
+  padding: 5px 12px;
+  box-sizing: border-box;
+}
+.song_list_main{
+  width: 100px;
+  height: 100px;
+}
+.song_play_num{
+  top: 5px;
+  right: 5px;
+  padding: 3px 5px;
+  background-color: rgba(0,0,0,.1);
+  border-radius: 11px;
+}
+.swiper_music{
+  height: 300px;
 }

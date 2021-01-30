@@ -1,1 +1,10 @@
-<van-search bind:change="search" value="" input-align="center" focus="{{ isFocus }}" input-align="center" placeholder="搜索 音乐/歌手" field-class="search_conter" />
+<van-search 
+  focus="{{ isFocus }}"
+  placeholder="搜索 音乐/歌手" 
+  field-class="search_conter"
+  input-class="search_ipt"
+  background="#f6f6f6"
+  bind:change="searchFn"
+  input-align="center"
+  shape="round"
+/>

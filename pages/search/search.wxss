@@ -1,6 +1,7 @@
-page{
-  background-color: #f6f6f6;
-}
 .search_conter{
+  background: #ffffff;
+}
+.van-search__content{
+  padding-right: 12px !important;
   background: #ffffff !important;
 }
