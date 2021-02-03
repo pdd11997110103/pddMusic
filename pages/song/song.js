@@ -79,7 +79,26 @@ Page({
   getRecommendMusic(){
     HTTP.recommendMusic(12)
     .then(res => {
-      console.log(res.result)
+      let arr = [];
+      let obj = [];
+      res.result.forEach((item,i) =>{
+        arr.push(item);
+        if((i + 1) % 3 === 0){
+          obj.push(arr);
+          arr = [];
+        };
+      });
+      this.setData({
+        recommendMusicList:obj
+      });
+      console.log(obj)
+    })
+  },
+  // 获取所有榜单
+  getRankingList(){
+    HTTP.rankingList()
+    .then(res => {
+      console.log(res)
     })
   },
   /**
@@ -89,7 +108,8 @@ Page({
     this.getBanner();
     this.getCircleIcon();
     this.getRecommendSongList();
-    // this.getRecommendMusic();
+    this.getRecommendMusic();
+    this.getRankingList();
   },
 
   /**

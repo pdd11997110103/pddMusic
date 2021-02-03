@@ -175,6 +175,13 @@ button[disabled] {
 .pf{
   position: fixed;
 }
+/* 定位居中 */
+.t50_l50{
+  top: -50%;
+  left: -50%;
+  margin-top: 50%;
+  margin-left: 50%;
+}
 /* z-index层级 */
 .z9{
   z-index: 9;

@@ -46,17 +46,61 @@
   <van-icon slot="icon_right" name="play" size="14" />
 </pdd-title>
 <!-- 推荐音乐 -->
-<swiper class="swiper_music bg_white" circular="true" next-margin="15px">
-  <swiper-item>
-    <view class="music_conter">
-      <view class="music_row">
-        <view class="row_img">
-          <image src="../../images/oumei.png"></image>
+<swiper class="swiper_music bg_white" circular="true" next-margin="50px">
+  <swiper-item wx:for="{{ recommendMusicList }}" wx:for-item="list" wx:key="index">
+    <view class="music_conter flex" wx:for="{{ list }}" wx:key="id">
+      <view class="music_row flex flex_a_s">
+        <view class="row_img_box">
+          <view class="row_left br8 pr flex_c">
+            <image src="{{ item.picUrl }}" class="row_img br8 pa"></image>
+            <van-icon name="play" size="24" class="white" />
+          </view>
         </view>
-        <view class="row_text">
-          <text>张三的情书 - 蔡健雅</text>
+        <view class="row_text flex flex_a_c">
+          <view>
+            <view>
+              <text class="lh20 ft16">{{ item.name }}</text>
+              <text class="lh20 gray_low"> - {{ item.song.artists[0].name }}</text>
+            </view>
+            <view>
+              <text class="lh20 gray_low">{{ item.song.alias[0] }}</text>
+            </view>
+          </view>
         </view>
       </view>
     </view>
   </swiper-item>
 </swiper>
+<!-- 分栏条 -->
+<pdd-title title="排行榜" enter="更多">
+  <van-icon slot="icon_right" name="arrow" size="14" />
+</pdd-title>
+<!-- 排行榜 -->
+<swiper class="swiper_ranking bg_white" circular="true" next-margin="50px">
+  <swiper-item class="ranking">
+    <view class="ranking_box br4">
+      
+    </view>
+  </swiper-item>
+
+
+
+  
+  <swiper-item class="ranking">
+    <view class="ranking_box br4"></view>
+  </swiper-item>
+  <swiper-item class="ranking">
+    <view class="ranking_box br4"></view>
+  </swiper-item>
+  <swiper-item class="ranking">
+    <view class="ranking_box br4"></view>
+  </swiper-item>
+</swiper>
+
+<!-- 尾巴 -->
+<view class="footer flex_c">
+  <view class="flex_c">
+    <text class="ft12 lh16 gray_low mr3">发现更多推荐内容</text>
+    <van-icon name="arrow" size="14" class="gray_low" />
+  </view>
+</view>

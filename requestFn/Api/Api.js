@@ -6,6 +6,7 @@ const API = {
   recommendMusic:"/personalized/newsong",//推荐新音乐
   circleIcon:"/homepage/dragon/ball",//首页圆形图标入口
   recommendSongList:"/personalized",//推荐歌单
+  rankingList:"/toplist"//所有榜单
 };
 
 const HTTP = {
@@ -65,6 +66,14 @@ const HTTP = {
       data:{
         limit:limit
       },
+    })
+  },
+  /**
+  * 所有榜单
+  */
+  rankingList(){
+    return requestFn.Request({
+      url:API.rankingList
     })
   },
 }
