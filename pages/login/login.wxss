@@ -1,0 +1,57 @@
+#box{
+  width: 78.67vw;
+  margin: 0 auto;
+  padding-top: 36px;
+}
+.title{
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 54px;
+}
+.user_name,.pass_word{
+  height: 53px;
+  border-bottom: 1px solid #EDEDED;
+}
+.pass_word{
+  margin-bottom: 24px;
+}
+.hint{
+  bottom: -18px;
+}
+.icon{
+  width: 60px;
+  height: 53px;
+  top: 0;
+  right: 0;
+}
+.close_box{
+  width: 16px;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.ipt{
+  width: 100%;
+  height: 100%;
+}
+#login{
+  height: 45px;
+  border-radius: 22.5px;
+  background-color: #33CC99;
+  margin: 40px 0 10px 0;
+}
+.sign_in{
+  text-decoration:underline;
+}
+.Vcode1,.Vcode2{
+  width: 98px;
+  height: 30px;
+  right: 0;
+  top: 11.5px;
+}
+.Vcode1{
+  background-color: #FD9827;
+}
+.Vcode2{
+  background-color: #EDEDED;
+}

@@ -8,11 +8,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bannerH:Number,
-    bannerList:[],
-    CircleIconList:[],
-    recommendSongList:[],
-    recommendMusicList:[],
+    loading:true,
+    userInfo:null,//用户信息
+    bannerH:Number,//banner图高度
+    bannerList:[],//banner图
+    CircleIconList:[],//圆形图标入口
+    recommendSongList:[],//推荐歌单
+    recommendMusicList:[],//推荐音乐
+    rankingList:[],//排行榜
   },
   // 跳转到搜索页
   toSearch(){
@@ -27,7 +30,6 @@ Page({
     !system.indexOf("iOS") ? type = 1 : type = 2;
     HTTP.Banner(type)
     .then(res => {
-      console.log(res.banners);
       this.setData({
         bannerList:res.banners
       });
@@ -48,7 +50,6 @@ Page({
   getCircleIcon(){
     HTTP.circleIcon()
     .then(res => {
-      console.log(res.data)
       this.setData({
         CircleIconList:res.data
       })
@@ -58,7 +59,6 @@ Page({
   getRecommendSongList(){
     HTTP.recommendSongList(10)
     .then(res => {
-      console.log(res.result)
       this.setData({
         recommendSongList:res.result.filter(this.filterLakh)
       })
@@ -91,15 +91,32 @@ Page({
       this.setData({
         recommendMusicList:obj
       });
-      console.log(obj)
     })
   },
-  // 获取所有榜单
-  getRankingList(){
-    HTTP.rankingList()
+  // 获取所有榜单摘要
+  getRankingBrief(){
+    HTTP.rankingBrief()
     .then(res => {
-      console.log(res)
+      let obj = res.list.filter((item)=>{
+        return item.tracks.length > 0
+      });
+      this.setData({
+        rankingList:obj
+      })
     })
+  },
+  // 回到顶部
+  returnTop(){
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 500
+    });
+  },
+  // 去登录
+  toLogin(){
+    wx.navigateTo({
+      url:"/pages/login/login"
+    });
   },
   /**
    * 生命周期函数--监听页面加载
@@ -109,14 +126,16 @@ Page({
     this.getCircleIcon();
     this.getRecommendSongList();
     this.getRecommendMusic();
-    this.getRankingList();
+    this.getRankingBrief();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.setData({
+      userInfo:app.globalData.userInfo || null
+    });
   },
 
   /**

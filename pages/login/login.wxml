@@ -1,0 +1,54 @@
+<!-- 密码登陆 -->
+<view id="box"  wx:if="{{isModel === 1}}">
+  <view class="title fw600">账号密码登录</view>
+  <view class="user_name pr">
+    <input type="text" class="ipt ft16 gray_low" value="{{userName}}" placeholder="请输入用户名/手机号" bindinput="getUserName" />
+    <view class="close_box pa flex_c z9">
+      <van-icon name="close" size="20px" wx:if="{{userName.length > 0}}" bindtap="closeValue0" />
+    </view>
+  </view>
+  <view class="pass_word pr">
+    <input type="text" class="ipt ft16 gray_low" placeholder="请输入密码" bindinput="getPassword" value="{{passWord}}" password="{{!isLook}}" />
+    <text class="hint pa red" wx:if="{{isHint}}">{{hint}}</text>
+    <view class="flex flex_s_b flex_a_c icon pa z9">
+      <view>
+        <van-icon name="close" size="20px" wx:if="{{passWord.length > 0}}" bindtap="closeValue1" />
+      </view>
+      <van-icon name="{{ isLook ? 'eye-o':'closed-eye' }}" size="20px" bindtap="showPassword" />
+    </view>
+  </view>
+  <view class="flex flex_s_b">
+    <text class="ft14 lh20" bindtap="changeLoginFn">短信登录</text>
+    <text class="ft14 lh20" bindtap="forgetPwd">忘记密码？</text>
+  </view>
+  <view id="login" class="flex_c white ft18" bindtap="login">登录</view>
+  <view class="text_c">
+    <text class="ft14">没有账号？</text>
+    <text class="ft14 blue sign_in" bindtap="goSignIn">马上注册</text>
+  </view>
+</view>
+
+<!-- 验证码登陆 -->
+<view id="box" wx:if="{{isModel === 2}}">
+  <view class="title fw600">验证码登录</view>
+  <view class="user_name pr">
+    <input type="text" class="ipt ft16 gray_low" type="number" placeholder="请输入手机号" bindinput="getIphone" value="{{iphone}}" />
+    <view class="close_box pa flex_c z9">
+      <van-icon name="close" size="20px" wx:if="{{iphone.length > 0}}" bindtap="closeValue2" />
+    </view>
+  </view>
+  <view class="pass_word pr">
+    <input type="text" class="ipt ft16 gray_low" placeholder="请输入验证码" bindinput="getVcode" value="{{Vcode}}" />
+    <text class="hint pa red" wx:if="{{isHint}}">{{hint}}</text>
+    <view class="Vcode1 pa z9 flex_c white br4" wx:if="{{second === 0}}" style="opacity:{{iphone.length >= 11 ? '1' : '0.5'}};" bindtap="sengVcode">获取验证码</view>
+    <view class="Vcode2 pa z9 flex_c gray_low br4" wx:if="{{second > 0}}">重新获取({{second}}s)</view>
+  </view>
+  <view class="flex flex_s_b">
+    <text class="ft14 lh20" bindtap="changeLoginFn">账号密码登录</text>
+  </view>
+  <view id="login" class="flex_c white ft18" bindtap="login">登录</view>
+  <view class="text_c">
+    <text class="ft14">没有账号？</text>
+    <text class="ft14 blue sign_in" bindtap="goSignIn">马上注册</text>
+  </view>
+</view>

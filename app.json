@@ -4,7 +4,8 @@
     "pages/song/song",
     "pages/mv/mv",
     "pages/my/my",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "dark",

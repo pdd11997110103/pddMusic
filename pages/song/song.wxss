@@ -89,10 +89,33 @@
   height: 240px;
 }
 .ranking_box{
-  width: 92%;
+  width: 95%;
   height: calc(100% - 30px);
   margin: 10px 0 0 10px;
   box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+.ranking_title{
+  height: 40px;
+}
+.ranking_main{
+  height: calc(100% - 70px);
+}
+.ranking_item{
+  width: calc(100% - 12px);
+  height: calc(100% / 3);
+  margin-left: 12px;
+}
+.ranking_icon_box{
+  width: 30px;
+  height: 100%;
+  justify-content: space-around;
+}
+.ranking_text{
+  width: calc(100% - 50px);
+  height: 100%;
+}
+.details{
+  height: 30px;
 }
 .footer{
   height: 50px;

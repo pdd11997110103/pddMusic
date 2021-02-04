@@ -77,30 +77,38 @@
 </pdd-title>
 <!-- 排行榜 -->
 <swiper class="swiper_ranking bg_white" circular="true" next-margin="50px">
-  <swiper-item class="ranking">
+  <swiper-item class="ranking" wx:for="{{ rankingList }}" wx:key="index">
     <view class="ranking_box br4">
-      
+      <view class="ranking_title flex_c">
+        <text class="ft14 fw600">{{ item.name }}</text>
+        <van-icon name="arrow" size="16" />
+      </view>
+
+      <view class="ranking_main">
+        <view class="ranking_item flex" wx:for="{{ item.tracks }}" wx:for-item="list" wx:key="id">
+          <view class="ranking_icon_box flex flex_a_c">
+            <van-icon name="fire" size="24" class="red" />
+          </view>
+          <view class="ranking_text flex flex_a_c">
+            <view>
+              <text class="ft12">{{ list.first }}</text>
+              <text class="gray_low"> - {{ list.second }}</text>
+            </view>
+          </view>
+        </view>
+        <view class="details flex_c">
+          <text class="gray_low">详情</text>
+          <van-icon name="arrow" size="12" />
+        </view>
+      </view>
     </view>
-  </swiper-item>
-
-
-
-  
-  <swiper-item class="ranking">
-    <view class="ranking_box br4"></view>
-  </swiper-item>
-  <swiper-item class="ranking">
-    <view class="ranking_box br4"></view>
-  </swiper-item>
-  <swiper-item class="ranking">
-    <view class="ranking_box br4"></view>
   </swiper-item>
 </swiper>
 
 <!-- 尾巴 -->
-<view class="footer flex_c">
+<view class="footer flex_c" bindtap="returnTop">
   <view class="flex_c">
-    <text class="ft12 lh16 gray_low mr3">发现更多推荐内容</text>
-    <van-icon name="arrow" size="14" class="gray_low" />
+    <van-icon name="replay" size="14" class="blue_low mr3" />
+    <text class="ft12 lh16 blue_low">点击刷新，换一批内容</text>
   </view>
 </view>

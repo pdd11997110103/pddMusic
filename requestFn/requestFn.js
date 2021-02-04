@@ -14,7 +14,7 @@ const Request = (options) =>{
       timeout:15000,
       success (res) {
         !options.notLoading && FN.LoadingOff();
-        console.log(res)
+        // console.log(res)
         if(res.statusCode === 200){
           resolve(res.data);
         }else{
