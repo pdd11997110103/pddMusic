@@ -1,2 +1,23 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="head flex flex_s_b">
+  <van-icon name="envelop-o" size="24" />
+  <van-icon name="bars" size="24" />
+</view>
+<!-- 搜索栏 -->
+<view class="search_box flex_c" bindtap="toSearch">
+  <view class="search_conter flex_c br4 bg_white">
+    <van-icon name="search" size="16" />
+    <text class="gray_low opacity7">搜索</text>
+  </view>
+</view>
+<!-- 用户信息 -->
+<view class="user_conter bg_white br8 flex flex_d_y">
+  <view class="user_conter_top">
+    <view class="user_img_box">
+
+    </view>
+    <view class="user_name">
+
+    </view>
+  </view>
+  <view class="user_conter_bottom"></view>
+</view>

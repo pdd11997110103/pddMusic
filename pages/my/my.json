@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "navigationBarTitleText":"我的"
 }

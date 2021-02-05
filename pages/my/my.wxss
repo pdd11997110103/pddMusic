@@ -1,1 +1,27 @@
-/* pages/my/my.wxss */
+.search_box{
+  height: 54px;
+}
+.search_conter{
+  width: calc(100% - 24px);
+  height: 34px;
+  border-radius: 17px;
+}
+.head{
+  height: 36px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+.user_conter{
+  width: calc(100% - 24px);
+  height: 120px;
+  margin: 0 auto;
+}
+.user_conter_top{
+  flex: 1;
+}
+.user_img_box{
+  width: 100px;
+}
+.user_conter_bottom{
+  flex: 1;
+}

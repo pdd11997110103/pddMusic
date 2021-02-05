@@ -5,9 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    
   },
-
+  // 跳转到搜索页
+  toSearch(){
+    wx.navigateTo({
+      url: '../search/search'
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
