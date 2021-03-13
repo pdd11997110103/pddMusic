@@ -7,20 +7,20 @@
   border-radius: 17px;
 }
 .head{
-  height: 36px;
-  padding: 0 12px;
+  height: 72rpx;
+  padding: 0 24rpx;
   box-sizing: border-box;
 }
 .user_conter{
   width: calc(100% - 24px);
-  height: 120px;
+  height: 240rpx;
   margin: 0 auto;
 }
 .user_conter_top{
   flex: 1;
 }
 .user_img_box{
-  width: 100px;
+  width: 200rpx;
 }
 .user_conter_bottom{
   flex: 1;

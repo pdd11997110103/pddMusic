@@ -1,6 +1,3 @@
-page{
-  background-color: #F6F6F6;
-}
 /* 锚点 */
 .anchor_top {
   width: 0;
@@ -21,11 +18,11 @@ page{
 }
 /* 标题 */
 #title{
-  height: 32px;
+  height: 64rpx;
 }
 .top_title{
-  width: 42px;
-  line-height: 32px;
+  width: 84rpx;
+  line-height: 64rpx;
 }
 #this{
   font-weight: 600;
@@ -33,17 +30,17 @@ page{
 }
 .line{
   width: 100%;
-  height: 4px;
+  height: 8rpx;
   background-color: #33CC99;
-  top: 22px;
+  top: 44rpx;
   z-index: -1;
 }
 .search_btn{
-  height: 30px;
+  height: 60rpx;
   background-color: #FFFFFF;
-  border-radius: 15px;
+  border-radius: 30rpx;
 }
 .search_icon{
-  width: 18px;
-  height: 18px;
+  width: 36rpx;
+  height: 36rpx;
 }

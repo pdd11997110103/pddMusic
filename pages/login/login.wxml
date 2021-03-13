@@ -4,7 +4,7 @@
   <view class="user_name pr">
     <input type="text" class="ipt ft16 gray_low" value="{{userName}}" placeholder="请输入用户名/手机号" bindinput="getUserName" />
     <view class="close_box pa flex_c z9">
-      <van-icon name="close" size="20px" wx:if="{{userName.length > 0}}" bindtap="closeValue0" />
+      <van-icon name="close" size="40rpx" wx:if="{{userName.length > 0}}" bindtap="closeValue0" />
     </view>
   </view>
   <view class="pass_word pr">
@@ -12,9 +12,9 @@
     <text class="hint pa red" wx:if="{{isHint}}">{{hint}}</text>
     <view class="flex flex_s_b flex_a_c icon pa z9">
       <view>
-        <van-icon name="close" size="20px" wx:if="{{passWord.length > 0}}" bindtap="closeValue1" />
+        <van-icon name="close" size="40rpx" wx:if="{{passWord.length > 0}}" bindtap="closeValue1" />
       </view>
-      <van-icon name="{{ isLook ? 'eye-o':'closed-eye' }}" size="20px" bindtap="showPassword" />
+      <van-icon name="{{ isLook ? 'eye-o':'closed-eye' }}" size="40rpx" bindtap="showPassword" />
     </view>
   </view>
   <view class="flex flex_s_b">
@@ -34,7 +34,7 @@
   <view class="user_name pr">
     <input type="text" class="ipt ft16 gray_low" type="number" placeholder="请输入手机号" bindinput="getIphone" value="{{iphone}}" />
     <view class="close_box pa flex_c z9">
-      <van-icon name="close" size="20px" wx:if="{{iphone.length > 0}}" bindtap="closeValue2" />
+      <van-icon name="close" size="40rpx" wx:if="{{iphone.length > 0}}" bindtap="closeValue2" />
     </view>
   </view>
   <view class="pass_word pr">

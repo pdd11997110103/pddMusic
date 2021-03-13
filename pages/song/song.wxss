@@ -1,122 +1,121 @@
 .search_box{
-  height: 54px;
+  height: 108rpx;
 }
 .search_conter{
-  width: calc(100% - 24px);
-  height: 34px;
-  border-radius: 17px;
+  width: calc(100% - 48rpx);
+  height: 68rpx;
+  border-radius: 34rpx;
 }
 .swiper_banner{
-  padding: 0 12px;
+  padding: 0 24rpx;
 }
 .banner_tag{
   bottom: 0;
   right: 0;
   width: auto;
-  padding: 4px 8px;
-  border-radius: 8px 0 0 0;
+  padding: 8rpx 16px;
+  border-radius: 16rpx 0 0 0;
 }
 .scroll_icon{
-  height: 74px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(50,50,50,0.1);
+  height: 148rpx;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+  border-bottom: 2rpx solid rgba(50,50,50,0.1);
 }
 .icon_enter{
-  height: 74px;
-  width: 68px;
+  height: 148rpx;
+  width: 136rpx;
   flex-shrink: 0;
 }
 .icon_enter_bg{
-  height: 50px;
-  width: 50px;
-  margin-bottom: 8px;
+  height: 100rpx;
+  width: 100rpx;
+  margin-bottom: 16rpx;
   background-color: #33CC99;
 }
 .scroll_song{
-  height: 142px;
-  padding-bottom: 12px;
-  padding-left: 7px;
-  margin-bottom: 10px;
-  border-radius: 0 0 10px 10px;
+  height: 284rpx;
+  padding-bottom: 24px;
+  padding-left: 14rpx;
+  margin-bottom: 20rpx;
+  border-radius: 0 0 20rpx 20rpx;
 }
 .song_list_conter{
-  width: 100px;
-  height: 142px;
+  width: 200rpx;
+  height: 284rpx;
   flex-shrink: 0;
-  padding: 5px 6px;
+  padding: 10rpx 12rpx;
 }
 .song_list_main{
-  width: 100px;
-  height: 100px;
+  width: 200rpx;
+  height: 200rpx;
 }
 .song_play_num{
-  top: 5px;
-  right: 5px;
-  padding: 3px 5px;
+  top: 10rpx;
+  right: 10rpx;
+  padding: 6rpx 10rpx;
   background-color: rgba(0,0,0,.1);
-  border-radius: 11px;
+  border-radius: 22rpx;
 }
 .swiper_music{
-  height: 240px;
-  margin-bottom: 10px;
+  height: 480rpx;
+  margin-bottom: 20rpx;
 }
 .music_conter{
   height: calc(100% / 3);
 }
 .music_row{
   flex: 1;
-  padding-left: 12px;
+  padding-left: 24rpx;
   box-sizing: border-box;
 }
 .row_img_box{
-  width: 90px;
+  width: 180rpx;
   height: 100%;
 }
 .row_left{
-  width: 75px;
+  width: 150rpx;
   height: 100%;
 }
 .row_img{
-  width: 75px;
-  height: 70px;
+  width: 150rpx;
+  height: 140rpx;
 }
 .row_text{
-  width: calc(100% - 100px);
+  width: calc(100% - 200rpx);
   height: 100%;
 }
 .swiper_ranking{
-  height: 240px;
+  height: 480rpx;
 }
 .ranking_box{
   width: 95%;
-  height: calc(100% - 30px);
-  margin: 10px 0 0 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  height: calc(100% - 60rpx);
+  margin: 20rpx 0 0 20rpx;
+  box-shadow: 0 0 20rpx rgba(0,0,0,.2);
 }
 .ranking_title{
-  height: 40px;
+  height: 80rpx;
 }
 .ranking_main{
-  height: calc(100% - 70px);
+  height: calc(100% - 140rpx);
 }
 .ranking_item{
-  width: calc(100% - 12px);
+  width: calc(100% - 24rpx);
   height: calc(100% / 3);
-  margin-left: 12px;
+  margin-left: 24px;
 }
 .ranking_icon_box{
-  width: 30px;
+  width: 60rpx;
   height: 100%;
-  justify-content: space-around;
 }
 .ranking_text{
-  width: calc(100% - 50px);
+  width: calc(100% - 100rpx);
   height: 100%;
 }
 .details{
-  height: 30px;
+  height: 60rpx;
 }
 .footer{
-  height: 50px;
+  height: 100rpx;
 }

@@ -8,6 +8,8 @@ App({
   globalData: {
     userInfo: null,
     systemInfo:null,
-    baseURL:'http://localhost:3000'
+    // baseURL:'http://localhost:3000',
+    baseURL:'http://www.wangpeng.club:9000',
+    // baseURL:'https://www.wangpeng.club:9000'
   }
 });

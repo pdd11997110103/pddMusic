@@ -2,6 +2,6 @@
   background: #ffffff;
 }
 .van-search__content{
-  padding-right: 12px !important;
+  padding-right: 24rpx !important;
   background: #ffffff !important;
 }

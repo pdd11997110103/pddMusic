@@ -1,11 +1,11 @@
 <view class="head flex flex_s_b">
-  <van-icon name="envelop-o" size="24" />
-  <van-icon name="bars" size="24" />
+  <van-icon name="envelop-o" size="48rpx" />
+  <van-icon name="bars" size="48rpx" />
 </view>
 <!-- 搜索栏 -->
 <view class="search_box flex_c" bindtap="toSearch">
   <view class="search_conter flex_c br4 bg_white">
-    <van-icon name="search" size="16" />
+    <van-icon name="search" size="32rpx" />
     <text class="gray_low opacity7">搜索</text>
   </view>
 </view>

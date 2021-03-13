@@ -1,7 +1,7 @@
 <!-- 搜索栏 -->
 <view class="search_box flex_c" bindtap="toSearch">
   <view class="search_conter flex_c br4 bg_white">
-    <van-icon name="search" size="16" />
+    <van-icon name="search" size="32rpx" />
     <text class="gray_low opacity7">搜索</text>
   </view>
 </view>
@@ -23,7 +23,7 @@
 </scroll-view>
 <!-- 分栏条 -->
 <pdd-title title="推荐歌单" enter="更多">
-  <van-icon slot="icon_right" name="arrow" size="12" />
+  <van-icon slot="icon_right" name="arrow" size="24rpx" />
 </pdd-title>
 <!-- 推荐歌单 -->
 <scroll-view scroll-x="true" enable-flex="true" enhanced="true" show-scrollbar="false" class="scroll_song flex flex_s_b bg_white">
@@ -31,7 +31,7 @@
     <view class="song_list_main oh pr br8">
       <image src="{{ item.picUrl }}"></image>
       <view class="song_play_num pa flex_c">
-        <van-icon name="play" size="12" class="white mr3" />
+        <van-icon name="play" size="24rpx" class="white mr3" />
         <text class="white">{{ item.playCount }}</text>
       </view>
     </view>
@@ -42,18 +42,18 @@
 </scroll-view>
 <!-- 分栏条 -->
 <pdd-title title="大家都在听" enter="播放">
-  <van-icon slot="icon_left" name="replay" size="16" class="mr3" />
-  <van-icon slot="icon_right" name="play" size="14" />
+  <van-icon slot="icon_left" name="replay" size="32rpx" class="mr3" />
+  <van-icon slot="icon_right" name="play" size="28rpx" />
 </pdd-title>
 <!-- 推荐音乐 -->
-<swiper class="swiper_music bg_white" circular="true" next-margin="50px">
+<swiper class="swiper_music bg_white" circular="true" next-margin="100rpx">
   <swiper-item wx:for="{{ recommendMusicList }}" wx:for-item="list" wx:key="index">
     <view class="music_conter flex" wx:for="{{ list }}" wx:key="id">
       <view class="music_row flex flex_a_s">
         <view class="row_img_box">
           <view class="row_left br8 pr flex_c">
             <image src="{{ item.picUrl }}" class="row_img br8 pa"></image>
-            <van-icon name="play" size="24" class="white" />
+            <van-icon name="play" size="48rpx" class="white" />
           </view>
         </view>
         <view class="row_text flex flex_a_c">
@@ -73,21 +73,21 @@
 </swiper>
 <!-- 分栏条 -->
 <pdd-title title="排行榜" enter="更多">
-  <van-icon slot="icon_right" name="arrow" size="14" />
+  <van-icon slot="icon_right" name="arrow" size="28rpx" />
 </pdd-title>
 <!-- 排行榜 -->
-<swiper class="swiper_ranking bg_white" circular="true" next-margin="50px">
+<swiper class="swiper_ranking bg_white" circular="true" next-margin="100rpx">
   <swiper-item class="ranking" wx:for="{{ rankingList }}" wx:key="index">
     <view class="ranking_box br4">
       <view class="ranking_title flex_c">
         <text class="ft14 fw600">{{ item.name }}</text>
-        <van-icon name="arrow" size="16" />
+        <van-icon name="arrow" size="32rpx" />
       </view>
 
       <view class="ranking_main">
         <view class="ranking_item flex" wx:for="{{ item.tracks }}" wx:for-item="list" wx:key="id">
-          <view class="ranking_icon_box flex flex_a_c">
-            <van-icon name="fire" size="24" class="red" />
+          <view class="ranking_icon_box flex flex_a_c flex_s_a">
+            <van-icon name="fire" size="48rpx" class="red" />
           </view>
           <view class="ranking_text flex flex_a_c">
             <view>
@@ -98,7 +98,7 @@
         </view>
         <view class="details flex_c">
           <text class="gray_low">详情</text>
-          <van-icon name="arrow" size="12" />
+          <van-icon name="arrow" size="24rpx" />
         </view>
       </view>
     </view>
@@ -108,7 +108,7 @@
 <!-- 尾巴 -->
 <view class="footer flex_c" bindtap="returnTop">
   <view class="flex_c">
-    <van-icon name="replay" size="14" class="blue_low mr3" />
+    <van-icon name="replay" size="28rpx" class="blue_low mr3" />
     <text class="ft12 lh16 blue_low">点击刷新，换一批内容</text>
   </view>
 </view>
