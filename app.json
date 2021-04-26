@@ -5,13 +5,19 @@
     "pages/mv/mv",
     "pages/my/my",
     "pages/search/search",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/map/map"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#33CC99",
     "navigationBarTitleText": "demo",
     "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用推荐附近设施"
+    }
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {

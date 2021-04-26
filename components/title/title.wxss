@@ -1,17 +1,17 @@
 
 .title_box{
-  padding: 8px 12px;
+  padding: 16rpx 24rpx;
   box-sizing: border-box;
 }
 .tltle_conter_left{
-  height: 30px;
+  height: 60rpx;
 }
 .tltle_conter_right{
-  width: 60px;
-  height: 26px;
-  border: 1px solid rgba(50,50,50,.1);
-  border-radius: 13px;
+  width: 120rpx;
+  height: 52rpx;
+  border: 2rpx solid rgba(50,50,50,.1);
+  border-radius: 26rpx;
 }
 .enter_txt{
-  margin-right: 3px;
+  margin-right: 6rpx;
 }

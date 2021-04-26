@@ -1,0 +1,14 @@
+<map
+  class="map"
+  markers="{{ markers }}"
+  longitude="{{ longitude }}"
+  latitude="{{ latitude }}"
+  scale='16'
+  enable-poi="{{ true }}"
+>
+</map>
+<view class="facility pf flex flex_a_s">
+  <view class="facility_ltem flex_c" wx:for="{{ facilityList }}" wx:key="index" data-title="{{ item.title }}" bindtap="searchFacility">
+    <text class="gray ft14">{{ item.title }}</text>
+  </view>
+</view>
