@@ -7,3 +7,5 @@
 #1，npm init
 
 #2，npm install --production
+
+#3，微信开发者工具左上角菜单 => 工具 => 构建npm

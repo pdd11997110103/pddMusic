@@ -1,7 +1,8 @@
 {
   "name": "appletmusic",
   "version": "1.0.0",
-  "description": "",
+  "description": "模仿QQ音乐＆网易云音乐的小程序",
+  "author": "pdd11997110103 <993080086@qq.com>",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/pdd11997110103/appletMusic.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pdd11997110103/appletMusic/issues"
