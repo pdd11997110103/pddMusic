@@ -1,6 +1,6 @@
 <view class="head flex flex_s_b">
   <van-icon name="envelop-o" size="48rpx" />
-  <van-icon name="bars" size="48rpx" />
+  <van-icon name="bars" size="48rpx" bindtap="toMap"/>
 </view>
 <!-- 搜索栏 -->
 <view class="search_box flex_c" bindtap="toSearch">
