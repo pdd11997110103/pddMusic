@@ -2,7 +2,6 @@ const requestFn = require('../requestFn');
 
 const API = {
   banner:"/banner",//banner图
-  login:"/login/cellphone",//登陆
   recommendMusic:"/personalized/newsong",//推荐新音乐
   circleIcon:"/homepage/dragon/ball",//首页圆形图标入口
   recommendSongList:"/personalized",//推荐歌单
@@ -41,20 +40,6 @@ const HTTP = {
       data:{
         limit:limit
       }
-    })
-  },
-  /**
-  * 登陆
-  * @param {number} phone - 手机号码
-  * @param {number} password - 密码
-  */
-  Login(phone, password){
-    return requestFn.Request({
-      url:API.login,
-      data:{
-        phone:phone,
-        password:password
-      },
     })
   },
   /**

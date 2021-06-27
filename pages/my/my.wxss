@@ -12,16 +12,30 @@
   box-sizing: border-box;
 }
 .user_conter{
-  width: calc(100% - 24px);
-  height: 240rpx;
+  width: calc(100% - 48rpx);
+  height: 160rpx;
   margin: 0 auto;
+  margin-top: 60rpx;
 }
-.user_conter_top{
-  flex: 1;
+.user_head_box{
+  width: 100%;
+  height: 80rpx;
 }
-.user_img_box{
-  width: 200rpx;
+.user_head{
+  width: 110rpx;
+  height: 110rpx;
+  border: 2rpx solid rgba(100,100,100,0.2);
+  top: -40rpx;
+  left: 30rpx;
+}
+.user_name{
+  width: calc(100% - 180rpx);
+  height: 80rpx;
+  line-height: 80rpx;
 }
 .user_conter_bottom{
-  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
 }

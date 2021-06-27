@@ -13,6 +13,18 @@ Page({
       url: '../search/search'
     });
   },
+  // 跳转到map
+  toMap(){
+    wx.navigateTo({
+      url: '../map/map'
+    });
+  },
+  // 跳转到搜索页
+  toLogin(){
+    wx.navigateTo({
+      url: '../login/login'
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */

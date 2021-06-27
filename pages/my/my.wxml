@@ -1,6 +1,6 @@
 <view class="head flex flex_s_b">
-  <van-icon name="envelop-o" size="48rpx" />
-  <van-icon name="bars" size="48rpx" />
+  <van-icon name="envelop-o" size="48rpx" bindtap="toLogin" />
+  <van-icon name="bars" size="48rpx" bindtap="toMap" />
 </view>
 <!-- 搜索栏 -->
 <view class="search_box flex_c" bindtap="toSearch">
@@ -11,13 +11,15 @@
 </view>
 <!-- 用户信息 -->
 <view class="user_conter bg_white br8 flex flex_d_y">
-  <view class="user_conter_top">
-    <view class="user_img_box">
-
+  <view class="user_head_box pr">
+    <view class="user_head pa br50 oh">
+      <image src="../../images/user1.png"></image>
     </view>
-    <view class="user_name">
-
+    <view class="user_name fr">
+      <text class="ft14">鹏多多</text>
     </view>
   </view>
-  <view class="user_conter_bottom"></view>
+  <view class="user_conter_bottom">
+    <text class="ft12">接受失败，但绝不选择放弃！</text>
+  </view>
 </view>

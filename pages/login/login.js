@@ -1,4 +1,4 @@
-import  HTTP  from "../../requestFn/Api/Api";
+import  HTTP  from "../../requestFn/Api/loginApi";
 const app = getApp();
 const FN = require('../../publicFn/public');
 
@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isModel:1,//登陆模式 false 账号密码 true 短信登陆
+    isModel:1,//登陆模式 1 账号密码 2 短信登陆
     isLook:false,//密码是否可见
     userName:"",//用户名或手机号
     iphone:"",//手机号
@@ -102,9 +102,9 @@ Page({
       FN.Toast("手机号码格式有误");
       return false;
     }
-    HTTP.sendVcode(iphone, 10)
+    HTTP.sendVcode(iphone)
     .then(res => {
-      if(res.status === "y"){
+      if(res.code === 200){
         FN.Toast("验证码发送成功", 1);
         let num = 60;
         let time = setInterval(()=> {
@@ -115,45 +115,44 @@ Page({
           if(num === 0) clearInterval(time);
         },1000);
       }else{
-        if(res.infoObject.isSuccess === "false"){
-          FN.Alert("发送验证码频繁，请等等再试");
-        }else{
-          FN.Alert(res.info);
-        }
+        FN.Alert("发送验证码频繁，请等等再试");
       }
     });
   },
   // 登陆
   login () {
     let type = this.data.isModel;
-    let userName,pwd,Vcode;
     if(type === 1){
-      userName = this.data.userName;
-      pwd = MD5.md5(this.data.passWord);
-      Vcode = null;
+      HTTP.Login(this.data.userName, this.data.passWord)
+      .then(res => {
+        console.log(res)
+        if(res.code === 200){
+          FN.Toast("登陆成功", 1);
+          wx.setStorage({
+            key:"userMsg",
+            data:res.profile,
+            success () {
+              app.globalData.userMsg = res.profile;
+              wx.reLaunch({
+                url:"../song/song"
+              });
+            }
+          });
+        }else{
+          FN.Toast(res);
+        };
+      });
     }else{
-      userName = this.data.iphone;
-      Vcode = this.data.Vcode;
-      pwd = null;
+      HTTP.verifyVcode(this.data.iphone, this.data.Vcode)
+      .then(res => {
+        console.log(res)
+        if(res.code === 200){
+          FN.Toast("验证成功", 1);
+        }else{
+          FN.Toast('验证码错误!');
+        };
+      });
     }
-    HTTP.login(userName, pwd, type, Vcode)
-    .then(res => {
-      if(res.status === "y"){
-        FN.Toast("登陆成功", 1);
-        wx.setStorage({
-          key:"userMsg",
-          data:res.infoObject,
-          success () {
-            app.globalData.userMsg = res.infoObject;
-            wx.reLaunch({
-              url:"../classList/classList"
-            });
-          }
-        });
-      }else{
-        FN.Toast(res.info);
-      };
-    });
   },
   /**
    * 生命周期函数--监听页面加载
